@@ -1,0 +1,222 @@
+:root{
+    --login-button-color: #4FB98E ;
+    --logout-button-color: #ED553B;
+    --main-bg-color: ;
+    --list-bg-color: #F2B134;
+}
+body{
+    margin:0;
+    background-color: rgba(219,217,209,0.2);
+}
+*{
+    box-sizing: border-box;
+}
+#email-verification-message{
+    margin-top: 20px;
+}
+.h1{
+    color: rgb(117, 118, 119);
+    font-size: 3em;
+}
+.center{
+    text-align: center;
+}
+.key{
+    display: none;
+}
+.button{
+    padding: 5px 25px;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-top: 25px;
+}
+.login--button{
+    background-color: var(--login-button-color);
+}
+.login--button:hover{
+    background-color: white;
+    border-color: var(--login-button-color);
+    color: var(--login-button-color);
+}
+.logout--button{
+    background-color: var(--logout-button-color);
+}
+.logout--button:hover{
+    background-color: white;
+    border-color: var(--logout-button-color);
+    color: var(--logout-button-color);
+}
+.signup--button:hover, .register--button:hover{
+    background-color: white;
+}
+.post--button{
+    background-color: var(--list-bg-color);
+}
+.post--button:hover{
+    background-color: white;
+    border-color: var(--list-bg-color);
+    color: var(--list-bg-color);
+}
+.post--button:disabled{
+    opacity: 0.5;
+}
+.changePassword--button{
+    display: none;
+}
+.changePassword--button:hover{
+    background-color: white;
+}
+#help{
+    transform: translateY(15%);
+}
+#help:hover{
+    transform: scaleZ(-0.2);
+    border-radius: 50%;
+    box-shadow: 0px 1px grey;
+}
+.help-content{
+    width: 80%;
+    display: inline-block;
+}
+.help-content-details{
+    width: 40%;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid black;
+}
+.--left{
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-right: none;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.--right{
+    text-align: right;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;   
+}
+.input{
+    padding: 5px 15px;;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+.input:focus{
+    border-color: var(--list-bg-color);
+}
+#login-container{
+    display: block;
+}
+#logout-container{
+    display: none;
+}
+.input-container{
+    margin: 50px 0 50px 0;
+    text-align: center;
+}
+.email-field, 
+.text-field, 
+.date-field{
+    display: inline-block;
+    padding: 5px 15px;
+}
+.text-field{
+    word-wrap: break-word;
+}
+.email-field{
+    display: none;
+}
+.date-field{
+    float:  right;
+}
+#list li{
+    border-bottom: 1px solid var(--list-bg-color);
+    margin-bottom: 3px;
+}
+.list-container{
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgba(162,163,165,0.2);
+    padding: 5px;
+}
+.remove{
+    float:right;
+}
+
+.top-container{
+    background-color: rgba(162,163,165,0.2);
+    padding: 10px;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+.--modal{
+    display: block;
+    width: 100%;
+    margin: 5px;
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 1000px){
+    .list-container{
+        width: 80%;
+    }
+    .modal-content{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 900px){
+    .modal-content{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .email-field{
+        display: none;
+    }
+    .modal-content{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 430px){
+    .input{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

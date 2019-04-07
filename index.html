@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Our To-do list</title>
+</head>
+<body>
+    <main>
+        <div class="top-container">
+            <div>
+                <h1 class="center h1">Our To-Do List</h1>
+            </div>
+            <div id="login-container" class="center">
+                <input id="email" type="text" placeholder="e-mail" class="input">
+                <input id="password" type="password" placeholder="Password" class="input">
+                <button id="login" class="button login--button">Login</button>
+                <button id="signup" class="button signup--button">Sign Up</button>
+                <i id="help" class="fas fa-question-circle"></i>
+                <div id="help-container" class="modal">
+                    <div class="modal-content center">
+                        <span class="close">&times;</span>
+                        <p>Test login informations:</p>
+                        <div>
+                            <span class="help-content-details --left">email:  </span><span class="help-content-details --right">o403541@nwytg.net</span>
+                            <span class="help-content-details --left">password: </span><span class="help-content-details --right">o403541</span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="logout-container" class="center">
+                <div><span>Welcome: </span><span id="username-container"></span></div>
+                <div id="email-verification-message"></div>
+                <button id="logout" class="button logout--button">Logout</button>
+                <button id="verify" class="button register--button">Verify e-mail</button>
+                <button id="changePassword" class="button changePassword--button">Change Password</button>
+            </div>
+            <div id="register-container" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <input id="email-register" type="text" placeholder="e-mail" class="input --modal">
+                    <input id="password-register" type="password" placeholder="Password" class="input --modal">
+                    <input id="password-check" type="password" placeholder="Repeat your password" class="input --modal">
+                    <button id="register" class="button register--button">Register</button>
+                </div>
+            </div>
+        </div>
+        <div class="input-container">
+            <input id="todo_item" type="text" placeholder="Enter your text here" class="input">
+            <button id="confirm_item" class="button post--button">Post</button>
+        </div>
+        <div class="list-container">
+            <ol id="list">
+
+            </ol>
+        </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCNocLpFFlQ7EMsKbgUZMmEPvQqug2Vk9M",
+            authDomain: "to-do-5b78c.firebaseapp.com",
+            databaseURL: "https://to-do-5b78c.firebaseio.com",
+            projectId: "to-do-5b78c",
+            storageBucket: "",
+            messagingSenderId: "202666491304"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
